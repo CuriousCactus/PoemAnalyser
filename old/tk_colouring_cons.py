@@ -192,3 +192,5 @@ frame.update_idletasks()
 canvas.config(scrollregion=canvas.bbox("all"))
 
 root.mainloop()
+
+input()

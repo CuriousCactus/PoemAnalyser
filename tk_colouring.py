@@ -1,9 +1,13 @@
 import re
+import os 
 from tkinter import *
 from tkinter import filedialog
 
-filepath = "./data/sDPHONsonnet116.txt"
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+os.chdir(dir_path)
+
+filepath = "./data/sDPHONsonnet116.txt"
 
 
 linitvowelcolours = ['#ff0000', '#ff4400', '#ff8800', '#ffbb00', '#ffdd00',
