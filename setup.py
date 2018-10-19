@@ -1,5 +1,9 @@
 import sys
+import os 
 from cx_Freeze import setup, Executable
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+os.chdir(dir_path)
 
 # Dependencies are automatically detected, but it might need fine tuning.
 build_exe_options = {"packages": ["os"], "excludes": [], "include_files": ["data"]}
@@ -9,7 +13,7 @@ company_name, product_name="LoisApps", "PoemAnalyser"
 # http://msdn.microsoft.com/en-us/library/windows/desktop/aa371847(v=vs.85).aspx
 shortcut_table = [
     ("DesktopShortcut",        # Shortcut
-     "ProgramMenuFolder",          # Directory_
+     "ProgramMenuFolder",      # Directory_
      "PoemAnalyser",           # Name
      "TARGETDIR",              # Component_
      "[TARGETDIR]tk_colouring.exe",# Target
